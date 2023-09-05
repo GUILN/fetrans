@@ -5,5 +5,5 @@
 @tailwind utilities;
 
 .btn {
-  @apply bg-primary text-secondary hover:bg-tertiary hover:text-quaternary rounded p-2;
+  @apply bg-primary text-quaternary hover:bg-tertiary hover:text-quaternary rounded p-2;
 }
