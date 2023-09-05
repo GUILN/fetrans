@@ -1,25 +1,27 @@
 import "../../styles.css";
-import { simulationApp } from "../simulation/app";
 type props = {
   children: string | React.ReactNode;
 };
 
-simulationApp().run();
-
 const Layout = ({ children }: props) => (
-  // Content wrapper
-  <div className="text-gray-500 min-h-screen content-start flex flex-col justify-between bg-slate-800">
-    <div className="flex justify-center ">
+  // Content wrapper grid grid-rows-3
+  <div className="text-white  min-h-screen content-start flex flex-col justify-between bg-slate-800">
+    <div className="flex justify-center">
       <nav className="">
         <span className="xl">Trabalho de Fetrans</span>
       </nav>
     </div>
-    <main className="mt-8 flex justify-center content-start">
-      <div className="border-solid border-red-300 border-2 rounded-md w-full h-full block">
-        <canvas id="canvas" className="w-full h-full"></canvas>
+    <main className="">
+      <span className="block row-span-1">Simulação</span>
+      <div className="border-solid border-red-300 border-2 rounded-md flex justify-center">
+        <canvas id="canvas" className="w-2/3 h-1/3"></canvas>
       </div>
     </main>
-    <footer className="bg-tertiary"></footer>
+    <footer className="bg-tertiary">
+      <div className="flex justify-center">
+        <span className="xl">Footer</span>
+      </div>
+    </footer>
   </div>
 );
 

@@ -1,4 +1,7 @@
+"use client";
+import { useEffect } from "react";
 import Layout from "./layout/layout";
+import { simulationApp } from "./simulation/app";
 
 const SomeComponent = () => (
   <div>
@@ -6,10 +9,14 @@ const SomeComponent = () => (
   </div>
 );
 
-const App = () => (
-  <Layout>
-    <SomeComponent />
-  </Layout>
-);
-
+const App = () => {
+  useEffect(() => {
+    simulationApp().run();
+  }, []);
+  return (
+    <Layout>
+      <SomeComponent />
+    </Layout>
+  );
+};
 export default App;
