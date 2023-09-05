@@ -1,0 +1,14 @@
+{
+  "extends": "next/core-web-vitals",
+  "ignorePatterns": [
+    "node_modules/",
+    ".next/",
+    "package.json",
+    "*.md",
+    "*.css",
+    "*.jpg",
+    "*.svg",
+    "package-lock.json",
+    ".eslintrc.json"
+  ]
+}

@@ -1,0 +1,10 @@
+# package json files
+
+./package.json
+./package-lock.json
+
+# ignore css files
+./src/**/*.css
+
+# gitignore
+./.gitignore

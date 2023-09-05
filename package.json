@@ -1,0 +1,42 @@
+{
+  "name": "tailwind-tutorial",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "build:css": "tailwindcss build src/styles.css -o public/styles.css",
+    "start": "next start",
+    "lint": "eslint --fix --ignore-path .gitignore --ignore-pattern *.css .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint:check": "eslint --max-warnings=10 --ignore-path .gitignore --ignore-pattern *.css .",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "@types/node": "20.5.1",
+    "@types/react": "18.2.20",
+    "@types/react-dom": "18.2.7",
+    "autoprefixer": "10.4.15",
+    "eslint": "8.47.0",
+    "eslint-config-next": "13.4.19",
+    "next": "13.4.19",
+    "postcss": "8.4.28",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "tailwindcss": "3.3.3",
+    "typescript": "5.1.6"
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "^9.0.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^14.0.0",
+    "prettier": "3.0.2"
+  },
+  "lint-staged": {
+    "**/*": [
+      "npm run format:check",
+      "npm run lint:check"
+    ]
+  }
+}
